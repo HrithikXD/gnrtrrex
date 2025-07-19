@@ -8,7 +8,9 @@ const Navigation = () => {
     { to: "header", label: "Home" },
     { to: "services", label: "Services" },
     //{ to: "portfolio", label: "Portfolio" },
-    { to: "contact", label: "Connect" },
+    { to: "reviews", label: "Feedback" },
+    { to: "contact", label: "Connect" }
+    
   ];
 
   const toggleMenu = () => {

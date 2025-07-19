@@ -1,4 +1,5 @@
 import React from "react";
+import InfiniteMenu from "../components/animations/InfiniteMenu";
 
 const Reviews = () => {
   const testimonials = [
@@ -13,17 +14,27 @@ const Reviews = () => {
     },
   ];
 
+  const items = [
+    {
+      image: "https://picsum.photos/300/300?grayscale&blur=10",
+      link: "",
+      title: "Local Business Owner",
+      description:
+        "GNRTRREX delivered a stunning website on time and within budget!",
+    },
+    {
+      image: "https://picsum.photos/400/400?grayscale&blur=10",
+      link: "",
+      title: "Startup Founder",
+      description:
+        "The app they built increased our customer engagement significantly.",
+    },
+  ];
+
   return (
-    <section id="testimonials" className="section">
+    <section id="reviews" className="section">
       <h2 className="section-title">What Clients Say</h2>
-      <div className="testimonials-grid">
-        {testimonials.map((testimonial) => (
-          <div key={testimonial.author} className="card testimonial">
-            <p className="card-description">"{testimonial.quote}"</p>
-            <p className="card-author">{testimonial.author}</p>
-          </div>
-        ))}
-      </div>
+      <InfiniteMenu items={items} />
     </section>
   );
 };

@@ -10,7 +10,7 @@ const Contact = () => {
     return (
       <section id="contact" className="section contact contact-sent">
         <h2 className="section-title">Thank You!</h2>
-        <p className="contact-message">
+        <div className="contact-message">
           <FallingText
           text={`Your message has been sent. We’ll get back to you soon!`}
           highlightWords={[
@@ -27,7 +27,7 @@ const Contact = () => {
           fontSize="1.25rem"
           mouseConstraintStiffness={0.9}
         />
-        </p>
+        </div>
       </section>
     );
   }
@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact">
       <h2 className="section-title">Connect</h2>
-      <p className="contact-promo">
+      <div className="contact-promo">
         <FallingText
           text={`Limited Offer: 20% Off Your First Project!`}
           highlightWords={[
@@ -50,7 +50,7 @@ const Contact = () => {
           fontSize="1.25rem"
           mouseConstraintStiffness={0.9}
         />
-      </p>
+      </div>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <input
