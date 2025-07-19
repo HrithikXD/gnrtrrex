@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll"; // Use react-scroll for smooth scrolling
 import { useForm, ValidationError } from "@formspree/react";
+import FallingText from "../components/animations/FallingText";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mwpbgdvk");
@@ -10,7 +11,22 @@ const Contact = () => {
       <section id="contact" className="section contact contact-sent">
         <h2 className="section-title">Thank You!</h2>
         <p className="contact-message">
-          Your message has been sent. We’ll get back to you soon!
+          <FallingText
+          text={`Your message has been sent. We’ll get back to you soon!`}
+          highlightWords={[
+            "sent",
+            "back",
+            "to",
+            "you",
+          ]}
+          highlightClass="highlighted"
+          trigger="hover"
+          backgroundColor="transparent"
+          wireframes={false}
+          gravity={0.56}
+          fontSize="1.25rem"
+          mouseConstraintStiffness={0.9}
+        />
         </p>
       </section>
     );
@@ -20,7 +36,20 @@ const Contact = () => {
     <section id="contact" className="section contact">
       <h2 className="section-title">Connect</h2>
       <p className="contact-promo">
-        Limited Offer: 20% Off Your First Project!
+        <FallingText
+          text={`Limited Offer: 20% Off Your First Project!`}
+          highlightWords={[
+            "20%",
+            "Project!",
+          ]}
+          highlightClass="highlighted"
+          trigger="hover"
+          backgroundColor="transparent"
+          wireframes={false}
+          gravity={0.56}
+          fontSize="1.25rem"
+          mouseConstraintStiffness={0.9}
+        />
       </p>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
