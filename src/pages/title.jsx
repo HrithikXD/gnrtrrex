@@ -1,5 +1,6 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
+import ShinyText from "../components/animations/ShinyText";
 
 const Title = () => {
   return (
@@ -7,7 +8,10 @@ const Title = () => {
       <div className="hero-bg"></div>
       <div className="hero-content">
         <div className="hero-content-inner">
-          <h1 className="hero-title">We Build Relationships, Not Just Projects</h1>
+          <h1 className="hero-title">
+            <ShinyText text="We Build Relationships, Not Just Projects" disabled={false} speed={5} className='custom-class' />
+          </h1>
+          
           <h3 className="hero-description">
             Custom websites and mobile apps tailored to your business needs.
           </h3>

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Link as ScrollLink } from "react-scroll"; // Use react-scroll for smooth scrolling
 import { useForm, ValidationError } from "@formspree/react";
 import FallingText from "../components/animations/FallingText";
+
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mwpbgdvk");
@@ -34,7 +33,9 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section contact">
-      <h2 className="section-title">Connect</h2>
+      <h2 className="section-title">
+        Connect
+        </h2>
       <div className="contact-promo">
         <FallingText
           text={`Limited Offer: 20% Off Your First Project!`}

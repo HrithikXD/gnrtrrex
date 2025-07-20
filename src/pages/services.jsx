@@ -1,4 +1,4 @@
-import React from "react";
+import SpotlightCard from "../components/animations/SpotLight";
 
 const Services = () => {
   const services = [
@@ -23,10 +23,16 @@ const Services = () => {
       <h2 className="section-title">Our Services</h2>
       <div className="services-grid">
         {services.map((service) => (
-          <div key={service.title} className="card">
-            <h3 className="card-title">{service.title}</h3>
-            <p className="card-description">{service.description}</p>
-          </div>
+          <SpotlightCard
+            className="custom-spotlight-card"
+            spotlightColor="rgba(0, 229, 255, 0.2)"
+            key={service.title}
+          >
+            <div key={service.title} className="card">
+              <h3 className="card-title">{service.title}</h3>
+              <p className="card-description">{service.description}</p>
+            </div>
+          </SpotlightCard>
         ))}
       </div>
     </section>

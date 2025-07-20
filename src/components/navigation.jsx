@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import Theme from "./theme";
 
@@ -37,7 +37,7 @@ const Navigation = () => {
                     event_category: "Navigation",
                     event_label: item.label,
                   });
-                setIsMenuOpen(false); // Close menu on link click
+                setIsMenuOpen(false); 
               }}
             >
               {item.label}
