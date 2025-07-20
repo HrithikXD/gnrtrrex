@@ -43,7 +43,12 @@ body::-webkit-scrollbar {
   --card-text: #cfcfcf;
   --footer-bg: #121212;
   --footer-text: #f5f5f5;
-  --hero-bg: linear-gradient(135deg, #424242 0%, #212121 50%, #424242 100%);
+  --hero-bg: linear-gradient(
+    135deg,
+    #bb86fc92 0%,
+    #42355392 50%,
+    #3a176592 100%
+  );
   --shimmer-color: rgba(187, 134, 252, 0.2);
   --accent: #03dac6;
   --success: #4caf50;
@@ -66,7 +71,12 @@ body::-webkit-scrollbar {
   --card-text: #e0e0e0;
   --footer-bg: #111111;
   --footer-text: #ffffff;
-  --hero-bg: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #0a0a0a 100%);
+  --hero-bg: linear-gradient(
+    135deg,
+    #ff6b6b8b 0%,
+    #46222253 50%,
+    #4b0a0a87 100%
+  );
   --shimmer-color: rgba(255, 107, 107, 0.2);
   --accent: #4ecdc4;
   --success: #66bb6a;
@@ -87,45 +97,16 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   color: var(--nav-text);
-  padding: 2rem 2rem;
+  padding: 1rem;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border-bottom: 2px solid var(--border);
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); */
+  /* border-bottom: 2px solid var(--border); */
   position: relative;
   z-index: 100;
   overflow: hidden;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--hero-bg);
-  opacity: 0.08;
-  z-index: -2;
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--shimmer-color),
-    transparent
-  );
-  animation: headerShimmer 3s ease-in-out infinite;
-  z-index: -1;
 }
 
 .header-content {
@@ -134,8 +115,8 @@ body::-webkit-scrollbar {
 }
 
 .header-title {
-  font-size: 3rem;
-  font-weight: 900;
+  font-size: 2rem;
+  /* font-weight: 900; */
   margin: 0;
   color: var(--primary);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -171,7 +152,7 @@ body::-webkit-scrollbar {
 }
 
 .header-tagline {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 1rem 0 0;
   font-weight: 400;
   color: var(--card-text);
@@ -240,6 +221,8 @@ body::-webkit-scrollbar {
   backdrop-filter: blur(5px);
   border-bottom: 1px solid var(--border);
   z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .nav-toggle {
@@ -304,7 +287,10 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 2rem;
+    /* padding: 1.5rem 2rem; */
+  }
+  .header-title {
+    font-size: 1rem;
   }
   .nav-toggle {
     display: block;
@@ -429,15 +415,6 @@ body::-webkit-scrollbar {
   background-color: var(--primary-hover);
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-content-inner {
-    padding: 1.5rem;
-  }
-}
-
 /* Animations */
 @keyframes gradientWave {
   0% {
@@ -490,7 +467,7 @@ body::-webkit-scrollbar {
   margin-bottom: 2.5rem;
 }
 
-.section-para{
+.section-para {
   text-align: center;
   color: var(--card-text);
   font-weight: 500;
@@ -688,14 +665,17 @@ body::-webkit-scrollbar {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  #reviews{
+  #reviews {
     height: 300px;
   }
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .hero-content-inner {
     padding: 1.5rem;
+  }
+  .hero-description{
+    font-size: 1rem;
   }
   .section-title {
     font-size: 1.75rem;
@@ -704,11 +684,10 @@ body::-webkit-scrollbar {
     padding: 1.5rem 1rem;
   }
   .header-title {
-    font-size: 2.2rem;
+    font-size: 1rem;
   }
   .header-tagline {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-size: 0.5rem;
   }
   .theme-toggle {
     flex-direction: column;
@@ -757,6 +736,7 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
   outline: none;
+  border-radius: 1.5rem;
 }
 
 #infinite-grid-menu-canvas:active {
@@ -775,6 +755,7 @@ body::-webkit-scrollbar {
   align-items: center;
   background-color: transparent;
   pointer-events: none;
+  color: white;
 }
 
 .infi-rev-in {
@@ -797,13 +778,13 @@ body::-webkit-scrollbar {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, var(--primary), var(--r-grad));
+  /* background: linear-gradient(135deg, var(--primary), var(--r-grad));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
 }
 .face-title::before {
   content: "◆";
@@ -839,13 +820,13 @@ body::-webkit-scrollbar {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, var(--primary), var(--r-grad));
+  /* background: linear-gradient(135deg, var(--primary), var(--r-grad));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
 }
 
 .face-description.active {
@@ -861,7 +842,7 @@ body::-webkit-scrollbar {
 }
 
 .shiny-text {
-  color: #b5b5b5a4; 
+  color: #b5b5b5a4;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
@@ -890,7 +871,7 @@ body::-webkit-scrollbar {
 .card-spotlight {
   position: relative;
   border-radius: 1.5rem;
-  border: 1px solid #222;
+  box-shadow: 0 0 10px var(--primary-hover);
   background-color: var(--card-bg);
   padding: 2rem;
   overflow: hidden;
@@ -907,7 +888,11 @@ body::-webkit-scrollbar {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--primary-hover), transparent 80%);
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    var(--primary-hover),
+    transparent 80%
+  );
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -917,5 +902,3 @@ body::-webkit-scrollbar {
 .card-spotlight:focus-within::before {
   opacity: 0.6;
 }
-
-

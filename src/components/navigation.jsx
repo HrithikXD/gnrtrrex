@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import Theme from "./theme";
+import Header from "./header";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,7 @@ const Navigation = () => {
 
   return (
     <nav className="nav">
+      <Header/>
       <button className="nav-toggle" onClick={toggleMenu}>
         <i className={`bx ${isMenuOpen ? "bx-x" : "bx-menu"}`}></i>
       </button>

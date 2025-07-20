@@ -9,7 +9,7 @@ const Title = () => {
       <div className="hero-content">
         <div className="hero-content-inner">
           <h1 className="hero-title">
-            <ShinyText text="We Build Relationships, Not Just Projects" disabled={false} speed={5} className='custom-class' />
+            <ShinyText text="We Build Relationships, Not Just Projects" disabled={false} speed={3} className='custom-class' />
           </h1>
           
           <h3 className="hero-description">
