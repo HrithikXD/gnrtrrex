@@ -6,7 +6,7 @@ import Header from "./header";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
-    { to: "header", label: "Home" },
+    { to: "top", label: "Home" },
     { to: "services", label: "Services" },
     //{ to: "portfolio", label: "Portfolio" },
     { to: "reviews", label: "Feedback" },

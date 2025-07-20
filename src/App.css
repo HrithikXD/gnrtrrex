@@ -289,9 +289,7 @@ body::-webkit-scrollbar {
     align-items: center;
     /* padding: 1.5rem 2rem; */
   }
-  .header-title {
-    font-size: 1rem;
-  }
+
   .nav-toggle {
     display: block;
     position: absolute;
@@ -680,14 +678,11 @@ body::-webkit-scrollbar {
   .section-title {
     font-size: 1.75rem;
   }
-  .header {
-    padding: 1.5rem 1rem;
-  }
   .header-title {
     font-size: 1rem;
   }
   .header-tagline {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .theme-toggle {
     flex-direction: column;

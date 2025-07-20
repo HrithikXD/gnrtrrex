@@ -10,12 +10,14 @@ import { useEffect, useState } from "react";
 import Theme from "./components/theme";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Top from "./pages/top";
 
 
 function App() {
   return (
     <Router>
       <div className="app">
+        <Top/>
         <Navigation/>
         <Title/>
         <Services />
